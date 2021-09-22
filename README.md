@@ -40,17 +40,40 @@ auto administrados
 administrados
 
 # Diagrama ER: Platziblog
-```bash
+```javascript
 
               
 ENTIDADES{                                    
-            usuarios->ATRIBUTOS->{login         posts->ATRIBUTOS->{titulo,          comentarios  categorias  Etiquetas
-                                  password      fecha_publicacion,
-                                  apodo         contenido,
-                                  email         estatus
-                                  id}           etiquetas
-                                                id}    
+            usuarios->ATRIBUTOS->{
+                                    login:VARCHAR(30)NN,                       
+                                    password:VARCHAR(32)NN,
+                                    niclname:VARCHAR(40)NN,         
+                                    email:VARCHAR(40)NN UNIQUE, 
+                                    id:INTERGER(PK)
+                                  },           
+                                                    
+           posts->ATRIBUTOS->{      
+                                    titulo:VARCHAR(150),
+                                    fecha_publicacion:TIMESTAMP,
+                                    contenido:TEXT,
+                                    estatus:CHAR(8)CHECK(IN('activo,'inactivo'),
+                                    id:INTEGER(PL)
+                              },
+           comentarios->ATRIBUTOS->{
+                                    Id:INTERGER(PK),
+                                    comentario:TEXT
+                                    },
+           categorias->ATRIBUTOS->{
+                                    Id:INTERGER(PK),
+                                    categoria:VARCHAR(30)
+                                    },
+           Etiquetas->{
+                                    Id:INTERGER(PK),
+                                    nombre_de_etiqueta:VARCHAR(30)
+                                    },
           }
+          
+          
             usuarios[1]-[escribe]-[N]comentarios
             usuarios[1]-[escribe]-[N]posts[1]-[tiene]-[N]comentarios
                                      posts[1]-[tiene]-[N]categorias
@@ -69,7 +92,7 @@ ENTIDADES{
 
 | Constraint     | Description                                                      | 
 | :----          | :-------                                                         | 
-|  not null      | se asegura que la columna no tenga valores nulos                 | 
+|  not null (NN)     | se asegura que la columna no tenga valores nulos                 | 
 |  unique        | se asegura que cada valor en la columna no se repita             | 
 |  primary key   | es una combinacion de not null  y unique                         | 
 |  foreing key   | identifica de manera unica una tupla en otra tabla               | 
