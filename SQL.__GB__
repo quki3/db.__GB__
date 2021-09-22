@@ -1,1 +1,6 @@
 # SQL
+```bash
+UPDATE clause   {UPDATE country
+SET clause      {SET population = (population + 1)=>EXPRESSION
+WHERE clause    {WHERE (name = USA)=>PREDICATE
+```
