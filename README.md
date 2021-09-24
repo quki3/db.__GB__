@@ -79,8 +79,9 @@ ENTIDADES{
                                      posts[1]-[tiene]-[N]categorias
                                      posts[N]-[tiene]-[N]etiquetas
 ```
-# como es el codico en consola
-```bash
+# CODIGO
+## como es el codico en consola para crear entidades con sus atributos
+```SQL
 CREATE TABLE ciudades
 (
        id serial PRIMARY KEY,
@@ -91,8 +92,26 @@ CREATE TABLE persona
        id serial PRIMARY KEY,
        apellido varchar(255) NOT NULL,
        nombre varchar(255) UNIQUE,
-       ciudad interger references ciudades (id)
+       ciudad interger,
+       FORING KEY(ciudad) REFERENCES ciudad(id)//
 );
+```
+## Para insertar entidades, atributos
+```sql
+INSERT INTO ciudad (nombre) VALUES('tucuman');
+INSERT INTO ciudad (nombre) VALUES('Buenos Aires'),('New Yourk'),('Caracas'),('Santa Cruz');
+INSERT INTO persona (nombre,apellido,ciudad) VALUES ('toni', 'tralice',1)
+```
+## Para selecionar  todas las columnas
+```sql
+select * from ciudad;
+select * from persona;
+```
+## Para selecionar  una columna en especial
+```sql
+select nombre from ciudad;
+select apellido from persona;
+select nombre,apellido from persona;
 ```
 # Diagrama fisico
 ## tipos de datos
