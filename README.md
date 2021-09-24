@@ -79,6 +79,21 @@ ENTIDADES{
                                      posts[1]-[tiene]-[N]categorias
                                      posts[N]-[tiene]-[N]etiquetas
 ```
+# como es el codico en consola
+```bash
+CREATE TABLE ciudades
+(
+       id serial PRIMARY KEY,
+       nombre varchar(255) UNIQUE
+ );
+CREATE TABLE persona
+(
+       id serial PRIMARY KEY,
+       apellido varchar(255) NOT NULL,
+       nombre varchar(255) UNIQUE,
+       ciudad interger references ciudades (id)
+);
+```
 # Diagrama fisico
 ## tipos de datos
 ```bash
@@ -99,10 +114,12 @@ ENTIDADES{
 | `double precision` | `doble presicion 8 bytes`|
 |`real`                 |presicion simple 4 bytes|
 
-| FECHA/HORA|LOGOS      |
+| FECHA/HORA|      |
 | :----     |:----      |
-| `date`    |`boolean`  |
-| `time`    |
+| `date`    |`yyyy-mm-dd`  |
+|`time`     |hh:mm:ss|
+| `timestamp`|yyyy-mm-dd hh:mm:ss|
+| `timestamp without time zone`|yyyy-mm-dd hh:mm:ss-tz|
 | `datetime`|
 | `timestamp`|
 | 
