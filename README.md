@@ -82,13 +82,31 @@ ENTIDADES{
 # Diagrama fisico
 ## tipos de datos
 ```bash
-| TEXTO     | NUMEROS               | FECHA/HORA|LOGOS      |
-| :----     | :-------              | :----     |:----      |
-| `char(n)` | `interger`            | `date`    |`boolean`  |
-| `varcha()`| `bigint  `            | `time`    |
-| `text   ` | `smallint`            | `datetime`|
-|           | `decimal(n,s)`        | `timestamp`|
-|           | `numeric(n,s)`        | 
+| TEXTO     |               | 
+| :----     | :-------              |
+| `char(size)` | `size decribe el numero de caracteres a guardar`            | 
+| `varcha()`| `permite tener una longitud variable `            | 
+| `text ` | `la longitud es variable no me importa el valor el size`            | 
+
+| NUMEROS               |           |
+| :-------              | :----     |
+| `interger`            | `equivale a 4bytes`    |
+| `bigint  `            | `equivale a 8 bytes`  |
+| `smallint`            | `equivale a 2bytes`|
+| `decimal(n,s)`        | `timestamp`|
+| `numeric(n,s)`        | si trabajamos con numeros decimales |
+| `serial`              | se autoincrementa |
+| `double precision` | `doble presicion 8 bytes`|
+|`real`                 |presicion simple 4 bytes|
+
+| FECHA/HORA|LOGOS      |
+| :----     |:----      |
+| `date`    |`boolean`  |
+| `time`    |
+| `datetime`|
+| `timestamp`|
+| 
+
 
 | Constraint     | Description                                                      | 
 | :----          | :-------                                                         | 
