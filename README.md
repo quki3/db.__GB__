@@ -112,6 +112,32 @@ select * from persona;
 select nombre from ciudad;
 select apellido from persona;
 select nombre,apellido from persona;
+
+select nombre from persona order by nombre
+
+select * from persona where nombre ='toni'
+select * from persona where nombre ='toni' and ciudad =5;
+select * from persona where apellidos not in('tralice','tita');
+select * from persona where apellidos in('tralice','tita');
+select * from persona where id in BETWEEN 4 and 6;
+
+select * from persona where apallido LIKE '%oni%' //? busca una palabra que contenga oni
+select * from persona where apallido LIKE 'oni%' //? busca una palabra que empiese con oni
+select * from persona where apallido LIKE '%oni' //? busca una palabra que termine con oni
+select * from persona where apallido ILIKE '%oni' //? busca una palabra que termine con oni ILIKE evita tener problemas de mayusculas 
+
+select distinct nombre from persona
+
+select (nombre || " " apellido) as "Nombre y Apellido" from persona // concatena esas busquedas como string
+select concat(nombre,' ', apellido) from persona; //  concatena esas busquedas como string
+select * from persona where ciudad in (select id from ciudad where nombre='Tucuman');//?selecciona todo de persona donde la ciudad tiene nombre tucuman treme el id
+
+select COUNT(*) from persona; //? cuenta las personas 
+select ciudad, COUNT(ciudad) from persona GROUP BY ciudad;//?cuenta las personas de cada ciudad
+select ciudad, nombre, count(ciudad) from persona group by ciudad, nombre;//? esto cuenta las ciudades y empareja las que tengan el mismo nombre y ciudad
+select ciudad, nombre, count(ciudad) from persona group by ciudad, nombre having count(ciudad) > 1;//?
+
+
 ```
 # Diagrama fisico
 ## tipos de datos
