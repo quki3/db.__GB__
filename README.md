@@ -212,6 +212,7 @@ text->para guardar datos grandos mas 500caracteres
 # Normalizacion
 ```bash
 SIN NORMALIZAR
+|ALUMNOS|
 | ALUMNOS   | NIVEL DE CURSO        | NOMBRE DE CURSO       |MATERIA 1              |MATERIA 2              |
 | :----     | :-------              | :----                 |:----                  |:----                  |
 | juanito   |maestria               | data engineering      |MySQL                  |Python                 |
