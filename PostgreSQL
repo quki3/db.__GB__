@@ -4,5 +4,6 @@
 create database sql; =>? crea una base de datos
 \c nombredelabasededatos =>? entra a la base de datos
 \dt =>?lista todas las tablas
+\d =>?lista todas las tablas
 \! clear =>? limpia la pantalla
 ```
