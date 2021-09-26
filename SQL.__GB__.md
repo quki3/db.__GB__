@@ -29,5 +29,39 @@ CREATE TABLE nombretabla {
 USE DATABASE nombredelabasededatos
 CREATE VIEWS v_nombre_vista AS SELECT nombredeloquevamosaseleccionar  FROM dedondelovamosaseleccionar WHERE condicion=algunacondicion
 
+Alter Table
+ALTER TABLE people ADD date_of_birth date;
+ALTER TABLE people ALTER COLUMN date_of_birth yearl;
+ALTER TABLE people DROP COLUMN date_of_birth
 
+Drop
+DROP TABLE nombredelaentidad;
+DROP DATABASE nombredelabasededatos;
+
+
+
+```
+# DML(data Manipulation language)\
+## tres grandes comandos de
+```bash
+insert
+update
+delete
+select
+```
+## Insert
+```sql
+INSERT INTO nombredetabla (last_name, first_name, address, city) VALUES ('Hernandez', 'Laure','Calle 21', 'Monterrey);
+```
+## Update
+```sql
+UPDATE nombredetabla SET last_name = 'chavez', city = 'Merida' WHERE person_id = 1;
+UPDATE nombredetabla SET firt_name = 'juan' WHERE city = 'Merida';
+UPDATE nombredelatabla SET firt_name = 'juan';
+```
+
+## Delete
+```sql
+DELETE FROM nombredetabla WHERE person_id =1;
+DELETE FROM nombreedtabla;
 ```
