@@ -27,7 +27,7 @@ CREATE TABLE nombretabla {
   city varchar(255)
 };
 USE DATABASE nombredelabasededatos
-
+CREATE VIEWS v_nombre_vista AS SELECT nombredeloquevamosaseleccionar  FROM dedondelovamosaseleccionar WHERE condicion=algunacondicion
 
 
 ```
