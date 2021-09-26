@@ -105,7 +105,7 @@ ENTIDADES{
 ```
 # CODIGO
 ## como es el codico en consola para crear entidades con sus atributos
-```SQL
+```PosgresSQL
 CREATE TABLE ciudades
 (
        id serial PRIMARY KEY,
