@@ -39,8 +39,8 @@ auto administrados
 ```
 administrados
 
-# Diagrama ER: Platziblog
-```javascript
+# Diagrama Fisico
+```sql
 
               
 ENTIDADES{                                    
@@ -56,12 +56,20 @@ ENTIDADES{
                                     titulo:VARCHAR(150),
                                     fecha_publicacion:TIMESTAMP,
                                     contenido:TEXT,
-                                    estatus:CHAR(8)CHECK(IN('activo,'inactivo'),
-                                    id:INTEGER(PL)
+                                    estatus:CHAR(8)CHECK(IN('activo,'inactivo'),//esto check si esta activo o inactivo else error
+                                    id:INTEGER(PK),
+                                    
+                                    /*para relacionar las tablas tenemos las claves foraneas es decir se an:ade la clave unica de                                            usuario como clave foranea que hace referencia al user que la creo*/
+                                    usuario_id:INTERGER FK
+                                    categorias_id:INTERGER FK,
                               },
            comentarios->ATRIBUTOS->{
                                     Id:INTERGER(PK),
                                     comentario:TEXT
+                                    
+                                    /*para relacionar las tablas tenemos las claves foraneas es decir se an:ade la clave unica de                                            usuario como clave foranea*/
+                                    usuario_id:INTERGER FK
+                                    posts_id:INTERGER FK
                                     },
            categorias->ATRIBUTOS->{
                                     Id:INTERGER(PK),
@@ -71,13 +79,29 @@ ENTIDADES{
                                     Id:INTERGER(PK),
                                     nombre_de_etiqueta:VARCHAR(30)
                                     },
+           Posts_etiquetas->{
+                                    posts_id:INTERGER (PK,FK)
+                                    etiquetas_id:INTERGER(PK,FK)
+                                    }
           }
-          
+          /*REGLAS DE LAS CLAVES FORANEAS
+          cuando es de 1-1 no importa a cual le pones la referencia de la otra tabla
+          cuando tienes 1-N en la tabla que tiene muchos (N) debes poner la clave foranea
+          cuando es de N-N es un caso ESPPECIAL bueno primero tenemos que romper esa relacion N-N poniendo una tabla intermedia
+          llamada tabla PIBOTE que nos ayuda a ver cual es la relacion entre ambas entidades, esta tabla por convencion lleva el 
+          nombre de ambas entidades/tablas dentro de esta tabla se colocan las dos llaves/id */
+```
+##  diagrama ER 
+```sql
           
             usuarios[1]-[escribe]-[N]comentarios
             usuarios[1]-[escribe]-[N]posts[1]-[tiene]-[N]comentarios
                                      posts[1]-[tiene]-[N]categorias
                                      posts[N]-[tiene]-[N]etiquetas
+```
+# RDBMS(relational database management system) || Diagrama fisico en forma practica
+```sql
+
 ```
 # CODIGO
 ## como es el codico en consola para crear entidades con sus atributos
