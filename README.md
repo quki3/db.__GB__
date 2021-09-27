@@ -319,3 +319,8 @@ cumple 1FN,2FN y 3FN los campos multivaluados se identifican por una unica clave
 |1          |MySQL      |
 |2          |Python     |
 ```
+# ORMs (Object-relational-mapping)
+interpreta la basededatos y la pasa a obj y biseversa
+```bash
+
+```
