@@ -34,4 +34,8 @@ UPDATE
 UPDATE nombredetabla SET last_name = 'chavez', city = 'Merida' WHERE person_id = 1;
 UPDATE nombredetabla SET firt_name = 'juan' WHERE city = 'Merida';
 UPDATE nombredelatabla SET firt_name = 'juan';
+
+DELETE
+DELETE FROM nombredetabla WHERE person_id =1;
+DELETE FROM nombreedtabla;
 ```
