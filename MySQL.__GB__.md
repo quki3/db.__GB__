@@ -38,4 +38,7 @@ UPDATE nombredelatabla SET firt_name = 'juan';
 DELETE
 DELETE FROM nombredetabla WHERE person_id =1;
 DELETE FROM nombreedtabla;
+
+SELECT
+SELECT first_name, last_name FROM people;
 ```
