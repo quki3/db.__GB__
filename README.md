@@ -1,5 +1,14 @@
 
+# material interesante 
+```bash
+claves foraneas
 
+https://platzi.com/clases/1566-bd/19810-creando-platziblog-tablas-dependientes/
+
+ingenieria inversa
+
+https://platzi.com/clases/1566-bd/19811-creando-platziblog-tablas-transistivas/
+```
 # BASE DE DATOS RELACIONALES (RDB)
 SQLServer
 delfin
