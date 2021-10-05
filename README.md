@@ -333,3 +333,17 @@ interpreta la basededatos y la pasa a obj y biseversa
 ```bash
 
 ```
+# Consultas o querys
+Estructura basica de un query
+```bash
+SELECT
+FROM
+WHERE
+----------------
+SELECT city, count(*) AS total //?selecciona city como una cuenta y la proyecta como total
+FROM people //?tomamos los datos de la tabla people
+WHERE active = true //? la condicion que dice traeme solo los que en activer traen la condicion true
+GROUP BY city //? agrupa las personas por un criterio en este caso ciudad
+ORDER BY total DESC //? ordena por ciudad en decendiente
+HAVING total >= 2; //? filtra el total cuando halle mas d edos personas por city
+```
