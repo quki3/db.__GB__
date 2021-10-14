@@ -1,5 +1,7 @@
 # PostSQL 
 ```bash
+\du =>? lista los usuarios
+\du+ =>? muiestra la descripcion
 \l =>? lista todas las bases de datos creadas
 create database sql; =>? crea una base de datos
 \c nombredelabasededatos =>? entra a la base de datos
