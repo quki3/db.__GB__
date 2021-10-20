@@ -40,5 +40,22 @@ DELETE FROM nombredetabla WHERE person_id =1;
 DELETE FROM nombreedtabla;
 
 SELECT
-SELECT first_name, last_name FROM people;
+SELECT * FROM nombredelatabla;
+SELECT first_name, last_name FROM nombredelatabla;
+SELECT titulo AS encabezado, fecha,status FROM nombredelatabla; //? aca se le dio un alias a titulo
+SELECT COUNT(*) AS numero_deposts FROM nombredetablaposts; //? esto trae todos los post y le da un alias de numero_deposts
+
+FROM 
+//uniendo las tablas
+JOIN
+SELECT * FROM nombredelatabla LEFT JOIN nombredelatabla ON nombredetabla_id = nombredetabla_id; //? vamos a unir las tablas atravez de su id
+SELECT * FROM nombredelatabla LEFT JOIN nombredelatabla ON nombredetabla_id = nombredetabla_id WHERE nombredetabla_id IS NULL; // va a traer todos los usuarios que no tengan ningun post
+SELECT * FROM nombredelatabla INNER JOIN nombredelatabla ON nombredetabla_id = nombredetabla_id; //INNER trae solo lo que esta internamente ligado
+
+WHERE
+SELECT * FROM tabla WHERE id<50;
+SELECT * FROM tabla WHERE titulo LIKE %escandalo%; // esto trae todo lo que tenga antes y despues de escandalo
+SELECT * FROM tabla WHERE facha_publicacion BETWEEN '2020-01' AND '2021-02';
+SELECT * FROM nombredetabla WHERE MOUNT(facha_publicacion) = '04'
+
 ```
