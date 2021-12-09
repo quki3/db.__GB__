@@ -1,0 +1,7 @@
+*code*
+```bash
+mongo `crear conecctions`
+show dbs `muestra las bases de datos`
+nombredelabasededatos.users.insert({"nombre":"someone"}) `crea un user`
+nombredelabasededatos.users.find()
+```
