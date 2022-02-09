@@ -46,7 +46,7 @@ posts->ATRIBUTOS:{
 	titulo:VARCHAR(150),
         fecha_publicacion:TIMESTAMP,
         contenido:TEXT,
-        estatus:CHAR(8)CHECK(IN('activo,'inactivo'))
+        estatus:CHAR(8)CHECK(IN('activo','inactivo'))
 	/*este check si esta activo o inactivo else error*/
         id:INTEGER(PK),
                                     
